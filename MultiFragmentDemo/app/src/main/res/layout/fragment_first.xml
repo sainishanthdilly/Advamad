@@ -1,0 +1,73 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context="com.example.nishanth.multifragmentdemo.FirstFragment"
+android:background="@android:color/holo_red_dark">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/activity_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        >
+
+    <Button
+        android:text="@string/add_movie"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="74dp"
+        android:id="@+id/buttonAddMovie"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/buttonShowListY"
+        android:layout_alignEnd="@+id/buttonShowListY"
+        android:layout_alignLeft="@+id/buttonShowListY"
+        android:layout_alignStart="@+id/buttonShowListY" />
+
+    <Button
+        android:text="@string/show__list_by_year"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="43dp"
+        android:id="@+id/buttonShowListY"
+        android:layout_below="@+id/buttonDeleteMovie"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:text="@string/edit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="29dp"
+        android:id="@+id/buttonEdit"
+        android:layout_below="@+id/buttonAddMovie"
+        android:layout_alignLeft="@+id/buttonAddMovie"
+        android:layout_alignStart="@+id/buttonAddMovie"
+        android:layout_alignRight="@+id/buttonAddMovie"
+        android:layout_alignEnd="@+id/buttonAddMovie" />
+
+    <Button
+        android:text="@string/delete_movie"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/buttonDeleteMovie"
+        android:layout_marginTop="36dp"
+        android:layout_below="@+id/buttonEdit"
+        android:layout_alignRight="@+id/buttonEdit"
+        android:layout_alignEnd="@+id/buttonEdit"
+        android:layout_alignLeft="@+id/buttonShowListY"
+        android:layout_alignStart="@+id/buttonShowListY" />
+
+    <Button
+        android:text="@string/show_list_by_rating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:id="@+id/buttonShowListR"
+        android:layout_below="@+id/buttonShowListY"
+        android:layout_alignLeft="@+id/buttonShowListY"
+        android:layout_alignStart="@+id/buttonShowListY" />
+
+</RelativeLayout>
+
+</FrameLayout>

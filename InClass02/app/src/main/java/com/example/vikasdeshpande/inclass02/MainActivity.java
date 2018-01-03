@@ -35,6 +35,7 @@ import okhttp3.Response;
 public class MainActivity extends AppCompatActivity {
 
     private static final Map<String, String> PLACES_BY_BEACONS;
+    private static final Map<String, Integer> flicker;
 
 
 
@@ -46,9 +47,18 @@ public class MainActivity extends AppCompatActivity {
 
     static {
         Map<String, String> placesByBeacons = new HashMap<>();
+
+        flicker = new HashMap<String, Integer>();
+
         placesByBeacons.put("15212:31506", "grocery");
         placesByBeacons.put("48071:25324", "lifestyle");
         placesByBeacons.put("26535:44799", "produce");
+
+        flicker.put("grocery",0);
+        flicker.put("lifestyle",0);
+        flicker.put("produce",0);
+        flicker.put("",1);
+
 
         PLACES_BY_BEACONS = Collections.unmodifiableMap(placesByBeacons);
 
@@ -58,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
     private String placesNearBeacon(Beacon beacon) {
 
         beaconKey = String.format("%d:%d", beacon.getMajor(), beacon.getMinor());
-        Log.d("major",beaconKey+" is major");
+        Log.d("major",beaconKey);
 
         if (PLACES_BY_BEACONS.containsKey(beaconKey)) {
             return PLACES_BY_BEACONS.get(beaconKey);
@@ -80,9 +90,9 @@ public class MainActivity extends AppCompatActivity {
         recViewSaved.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
 
 
-        final String url = "http://34.203.225.11:8080/shop";
+        final String url = "http://34.228.153.214:8080/shop";
 
-         client = new OkHttpClient();
+        client = new OkHttpClient();
 
         formBody = new FormBody.Builder().build();
         Request request =new Request.Builder()
@@ -145,30 +155,60 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onBeaconsDiscovered(BeaconRegion beaconRegion, List<Beacon> beacons) {
 
-                if (!beacons.isEmpty()) {
-                    Beacon nearestBeacon = null;
+
+                String places;
+                Beacon nearestBeacon = null;
+                if(!beacons.isEmpty()) {
+
+
+
+
                     for (Beacon b : beacons) {
 
-                        Log.d("checkmajor",b.getMajor() + ":" + b.getMinor());
+                        Log.d("checkall", b.getMajor() + ":" + b.getMinor());
 
                         if (PLACES_BY_BEACONS.containsKey(b.getMajor() + ":" + b.getMinor())) {
                             nearestBeacon = b;
+                         //   Log.d("distance", ""+.computeAccuracy(b)));
                             Log.d("ni", "ndemo2");
                             break;
                         }
                     }
 
-                    if (nearestBeacon == null) {
+                    if (nearestBeacon == null && !beacons.isEmpty()) {
                         nearestBeacon = beacons.get(0);
                     }
 
 
+                    places = placesNearBeacon(nearestBeacon);
+                }
+                else {
 
-                    String places = placesNearBeacon(nearestBeacon);
-                    // TODO: update the UI here
-                    if(!places.equals(current)){
+                    places = "";
+                }
 
-                        current = places;
+                /////////
+                for (String s: flicker.keySet()) {
+                    if(s.equals(places))
+                        flicker.put(s,flicker.get(s)+1);
+                    else
+                        flicker.put(s,0);
+
+                }
+
+
+                if(!(flicker.get(places)>5)) {
+                    Log.d("major",flicker.get(places)+"");
+                    places = current;
+                    Log.d("major",flicker.get(places)+"");
+                }
+                ///////
+
+
+                // TODO: update the UI here
+                if(!places.equals(current)){
+
+                    current = places;
 
                     if (places.trim().length() == 0) {
                         formBody = new FormBody.Builder()
@@ -238,8 +278,8 @@ public class MainActivity extends AppCompatActivity {
 
                 }
 
-                    Log.d("Airport", "Nearest places: " + places);
-                }
+                // Log.d("Airport", "Nearest places: " + places);
+
 
             }
         });
@@ -271,3 +311,4 @@ public class MainActivity extends AppCompatActivity {
     }
 
 }
+

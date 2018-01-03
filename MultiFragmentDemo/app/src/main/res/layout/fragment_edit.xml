@@ -1,0 +1,171 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.nishanth.multifragmentdemo.EditFragment">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/activity_edit_movie"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <TextView
+            android:text="@string/text_movie_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="29dp"
+            android:id="@+id/e_textViewMovieName" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/e_textViewMovieName"
+            android:layout_toEndOf="@+id/e_textViewMovieName"
+            android:layout_marginLeft="39dp"
+            android:layout_marginStart="39dp"
+            android:layout_marginTop="14dp"
+            android:id="@+id/e_editTextMovieName"
+            android:maxLength="50" />
+
+        <TextView
+            android:text="@string/add_description"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/e_editTextMovieName"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="18dp"
+            android:id="@+id/e_textViewDescription"
+            android:layout_width="wrap_content" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine"
+            android:ems="10"
+            android:layout_below="@+id/e_textViewDescription"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="18dp"
+            android:id="@+id/e_editTextDescription"
+            android:maxLength="1000" />
+
+        <TextView
+            android:text="@string/add_genre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/e_editTextDescription"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="31dp"
+            android:id="@+id/e_textViewGenre"
+            android:prompt="@string/spineer_select" />
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/e_textViewGenre"
+            android:layout_toRightOf="@+id/e_textViewMovieName"
+            android:layout_toEndOf="@+id/e_textViewMovieName"
+            android:layout_marginLeft="22dp"
+            android:layout_marginStart="22dp"
+            android:entries="@array/genre_array"
+            android:id="@+id/e_spinnerGenre" />
+
+        <TextView
+            android:text="@string/add_rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:id="@+id/e_textViewRating"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <SeekBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/e_textViewRating"
+            android:layout_toRightOf="@+id/e_textViewDescription"
+            android:id="@+id/e_seekBarRating"
+            android:max="5"
+            android:layout_alignRight="@+id/e_buttonSubmitAddMovie"
+            android:layout_alignEnd="@+id/e_buttonSubmitAddMovie" />
+
+        <TextView
+            android:text="@string/add_year"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/e_seekBarRating"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="31dp"
+            android:id="@+id/e_textViewYear" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="numberSigned"
+            android:ems="10"
+            android:layout_alignTop="@+id/e_textViewYear"
+            android:layout_alignLeft="@+id/e_spinnerGenre"
+            android:layout_alignStart="@+id/e_spinnerGenre"
+            android:id="@+id/e_editTextYear"
+            android:maxLength="4" />
+
+        <TextView
+            android:text="@string/add_IMDB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/e_editTextYear"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="35dp"
+            android:id="@+id/e_textViewIMDB" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:layout_below="@+id/e_editTextYear"
+            android:layout_alignLeft="@+id/e_seekBarRating"
+            android:layout_alignStart="@+id/e_seekBarRating"
+            android:layout_marginTop="23dp"
+            android:id="@+id/e_editTextIMDB" />
+
+        <Button
+            android:text="@string/save_changes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="14dp"
+            android:id="@+id/e_buttonSubmitAddMovie" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/e_textViewRating"
+            android:layout_alignRight="@+id/e_editTextMovieName"
+            android:layout_alignEnd="@+id/e_editTextMovieName"
+            android:id="@+id/e_textViewPI" />
+
+        <TextView
+            android:text="@string/rate1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/e_textViewPI"
+            android:layout_alignRight="@+id/e_editTextIMDB"
+            android:layout_alignEnd="@+id/e_editTextIMDB"
+            android:id="@+id/rate1" />
+
+    </RelativeLayout>
+
+</FrameLayout>

@@ -1,0 +1,207 @@
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.nishanth.multifragmentdemo.ShowbyYearFragment">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/activity_movieby_year"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <TextView
+            android:text="@string/moviesByyear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:textStyle="bold"
+            android:id="@+id/y_textViewmoviesByYear"
+            tools:text="@string/movies__by_year" />
+
+        <TextView
+            android:text="@string/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/y_textViewmoviesByYear"
+            android:layout_marginTop="20dp"
+            android:textStyle="bold"
+            android:id="@+id/y_textViewTitle"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/y_textViewDescr"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/y_textViewRTitle" />
+
+        <TextView
+            android:text="@string/add_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:textStyle="bold"
+            android:id="@+id/y_textViewDescr"
+            android:layout_below="@+id/y_textViewTitle"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:text="@string/add_genre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/y_editTextRResult"
+            android:layout_alignParentLeft="true"
+            android:textStyle="bold"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="40dp"
+            android:id="@+id/y_textViewGenre" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/y_textViewGenre"
+            android:layout_alignRight="@+id/y_textViewmoviesByYear"
+            android:layout_alignEnd="@+id/y_textViewmoviesByYear"
+            android:id="@+id/y_textViewRGenre" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/y_textViewGenre"
+            android:layout_alignParentLeft="true"
+            android:textStyle="bold"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="20dp"
+            android:id="@+id/y_textViewRating"
+            android:text="@string/add_rating" />
+
+        <TextView
+            android:text="@string/add_year"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/y_textViewRating"
+            android:layout_alignParentLeft="true"
+            android:textStyle="bold"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="20dp"
+            android:id="@+id/y_textViewYear" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/y_textViewYear"
+            android:layout_alignRight="@+id/y_textViewRGenre"
+            android:layout_alignEnd="@+id/y_textViewRGenre"
+            android:id="@+id/y_textViewRYear" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/y_textViewIMDB"
+            android:layout_alignEnd="@+id/y_textViewIMDB"
+            android:layout_marginTop="20dp"
+
+            android:layout_alignParentRight="true"
+            android:layout_alignRight="@+id/y_textViewIMDB"
+            android:id="@+id/y_textViewRMDB"
+            android:layout_marginRight="120dp" />
+
+        <TextView
+            android:text="@string/add_IMDB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:id="@+id/y_textViewIMDB"
+            android:textStyle="bold"
+            android:layout_below="@+id/y_textViewYear"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <Button
+            android:text="@string/btfirst"
+            android:layout_width="64dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="40dp"
+            android:id="@+id/y_buttonFirst"
+            android:background="@android:color/transparent"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:textSize="36sp" />
+
+        <Button
+            android:text="@string/finish"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/y_buttonFinish"
+            android:layout_alignBaseline="@+id/y_buttonPrevious"
+            android:layout_alignBottom="@+id/y_buttonPrevious"
+            android:layout_alignLeft="@+id/y_textViewmoviesByYear"
+            android:layout_alignStart="@+id/y_textViewmoviesByYear" />
+
+        <Button
+            android:text="@string/btprev"
+            android:layout_height="wrap_content"
+            android:id="@+id/y_buttonPrevious"
+            android:layout_width="64dp"
+            android:background="@android:color/transparent"
+            android:layout_alignTop="@+id/y_buttonFirst"
+            android:layout_toRightOf="@+id/y_textViewRating"
+            android:textSize="36sp"
+            android:layout_toEndOf="@+id/y_textViewRating" />
+
+        <Button
+            android:text="@string/btnext"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/y_buttonFinish"
+            android:background="@android:color/transparent"
+            android:textSize="36sp"
+            android:layout_width="64dp"
+            android:layout_toRightOf="@+id/y_buttonFinish"
+            android:id="@+id/y_buttonNext" />
+
+        <Button
+            android:text="@string/btlast"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/y_buttonNext"
+            android:layout_toRightOf="@+id/y_textViewRRating"
+            android:layout_toEndOf="@+id/y_textViewRRating"
+            android:background="@android:color/transparent"
+            android:layout_width="64dp"
+            android:textSize="36sp"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="45dp"
+            android:layout_marginStart="45dp"
+            android:id="@+id/y_buttonLast" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine"
+            android:ems="10"
+            android:layout_marginTop="14dp"
+            android:id="@+id/y_editTextRResult"
+
+            android:background="@drawable/desc"
+            android:layout_below="@+id/y_textViewDescr"
+            android:height="70dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/y_textViewRRating"
+            android:layout_toLeftOf="@+id/y_textViewRGenre"
+            android:layout_toEndOf="@+id/y_textViewRTitle"
+            android:layout_alignBottom="@+id/y_textViewRating"
+            android:layout_toRightOf="@+id/y_textViewRTitle" />
+
+    </RelativeLayout>
+
+
+</FrameLayout>

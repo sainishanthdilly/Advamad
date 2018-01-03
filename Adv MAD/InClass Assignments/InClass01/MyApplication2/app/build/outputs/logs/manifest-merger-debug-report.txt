@@ -1,0 +1,81 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/sainishanthdilly/AndroidStudioProjects/MyApplication2/app/src/main/AndroidManifest.xml:2:1-22:12
+	package
+		ADDED from /Users/sainishanthdilly/AndroidStudioProjects/MyApplication2/app/src/main/AndroidManifest.xml:3:5-46
+		INJECTED from /Users/sainishanthdilly/AndroidStudioProjects/MyApplication2/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/sainishanthdilly/AndroidStudioProjects/MyApplication2/app/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /Users/sainishanthdilly/AndroidStudioProjects/MyApplication2/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/sainishanthdilly/AndroidStudioProjects/MyApplication2/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/sainishanthdilly/AndroidStudioProjects/MyApplication2/app/src/main/AndroidManifest.xml:2:11-69
+	android:versionCode
+		INJECTED from /Users/sainishanthdilly/AndroidStudioProjects/MyApplication2/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/sainishanthdilly/AndroidStudioProjects/MyApplication2/app/src/main/AndroidManifest.xml
+uses-permission#android.permission.INTERNET
+ADDED from /Users/sainishanthdilly/AndroidStudioProjects/MyApplication2/app/src/main/AndroidManifest.xml:4:1-62
+	android:name
+		ADDED from /Users/sainishanthdilly/AndroidStudioProjects/MyApplication2/app/src/main/AndroidManifest.xml:4:18-60
+application
+ADDED from /Users/sainishanthdilly/AndroidStudioProjects/MyApplication2/app/src/main/AndroidManifest.xml:5:5-20:19
+MERGED from [com.android.support:appcompat-v7:24.2.1] /Users/sainishanthdilly/.android/build-cache/0ecc7dc81eb291b1c47bc401eebaa741f361ac91/output/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-v4:24.2.1] /Users/sainishanthdilly/.android/build-cache/9aeed29d3847243cb5839dcceeb1302f7fbbb57f/output/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-fragment:24.2.1] /Users/sainishanthdilly/.android/build-cache/68a75ffe72c0357ba37d41ebf7edf385385000fa/output/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-media-compat:24.2.1] /Users/sainishanthdilly/.android/build-cache/c76162818210f4c10533c2f4fbeb204e3e8e8322/output/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-ui:24.2.1] /Users/sainishanthdilly/.android/build-cache/9840da8306acbb246355755e8456f1e5d23743c8/output/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-utils:24.2.1] /Users/sainishanthdilly/.android/build-cache/aadd660293e11519768a83f4d5f093472903d58a/output/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:animated-vector-drawable:24.2.1] /Users/sainishanthdilly/.android/build-cache/57d88ede9ba174cad7fefe324b68d50dbf526969/output/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-vector-drawable:24.2.1] /Users/sainishanthdilly/.android/build-cache/6d072d0d88ce98fc2c8f95bb1d94055c5c575f6f/output/AndroidManifest.xml:23:5-20
+MERGED from [com.android.support:support-compat:24.2.1] /Users/sainishanthdilly/.android/build-cache/d273b2878cbedc041a33b556c8ad292cc2d0f986/output/AndroidManifest.xml:25:5-20
+	android:label
+		ADDED from /Users/sainishanthdilly/AndroidStudioProjects/MyApplication2/app/src/main/AndroidManifest.xml:8:9-41
+	android:supportsRtl
+		ADDED from /Users/sainishanthdilly/AndroidStudioProjects/MyApplication2/app/src/main/AndroidManifest.xml:9:9-35
+	android:allowBackup
+		ADDED from /Users/sainishanthdilly/AndroidStudioProjects/MyApplication2/app/src/main/AndroidManifest.xml:6:9-35
+	android:icon
+		ADDED from /Users/sainishanthdilly/AndroidStudioProjects/MyApplication2/app/src/main/AndroidManifest.xml:7:9-43
+	android:theme
+		ADDED from /Users/sainishanthdilly/AndroidStudioProjects/MyApplication2/app/src/main/AndroidManifest.xml:10:9-40
+activity#com.example.venkatesh.inclass01.MainActivity
+ADDED from /Users/sainishanthdilly/AndroidStudioProjects/MyApplication2/app/src/main/AndroidManifest.xml:11:9-17:20
+	android:name
+		ADDED from /Users/sainishanthdilly/AndroidStudioProjects/MyApplication2/app/src/main/AndroidManifest.xml:11:19-47
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from /Users/sainishanthdilly/AndroidStudioProjects/MyApplication2/app/src/main/AndroidManifest.xml:12:13-16:29
+action#android.intent.action.MAIN
+ADDED from /Users/sainishanthdilly/AndroidStudioProjects/MyApplication2/app/src/main/AndroidManifest.xml:13:17-69
+	android:name
+		ADDED from /Users/sainishanthdilly/AndroidStudioProjects/MyApplication2/app/src/main/AndroidManifest.xml:13:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /Users/sainishanthdilly/AndroidStudioProjects/MyApplication2/app/src/main/AndroidManifest.xml:15:17-77
+	android:name
+		ADDED from /Users/sainishanthdilly/AndroidStudioProjects/MyApplication2/app/src/main/AndroidManifest.xml:15:27-74
+activity#com.example.venkatesh.inclass01.ProfileDetails
+ADDED from /Users/sainishanthdilly/AndroidStudioProjects/MyApplication2/app/src/main/AndroidManifest.xml:18:9-52
+	android:name
+		ADDED from /Users/sainishanthdilly/AndroidStudioProjects/MyApplication2/app/src/main/AndroidManifest.xml:18:19-49
+activity#com.example.venkatesh.inclass01.SignUp
+ADDED from /Users/sainishanthdilly/AndroidStudioProjects/MyApplication2/app/src/main/AndroidManifest.xml:19:9-53
+	android:name
+		ADDED from /Users/sainishanthdilly/AndroidStudioProjects/MyApplication2/app/src/main/AndroidManifest.xml:19:19-41
+uses-sdk
+INJECTED from /Users/sainishanthdilly/AndroidStudioProjects/MyApplication2/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+MERGED from [com.android.support:appcompat-v7:24.2.1] /Users/sainishanthdilly/.android/build-cache/0ecc7dc81eb291b1c47bc401eebaa741f361ac91/output/AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:support-v4:24.2.1] /Users/sainishanthdilly/.android/build-cache/9aeed29d3847243cb5839dcceeb1302f7fbbb57f/output/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-fragment:24.2.1] /Users/sainishanthdilly/.android/build-cache/68a75ffe72c0357ba37d41ebf7edf385385000fa/output/AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-media-compat:24.2.1] /Users/sainishanthdilly/.android/build-cache/c76162818210f4c10533c2f4fbeb204e3e8e8322/output/AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-core-ui:24.2.1] /Users/sainishanthdilly/.android/build-cache/9840da8306acbb246355755e8456f1e5d23743c8/output/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-utils:24.2.1] /Users/sainishanthdilly/.android/build-cache/aadd660293e11519768a83f4d5f093472903d58a/output/AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:animated-vector-drawable:24.2.1] /Users/sainishanthdilly/.android/build-cache/57d88ede9ba174cad7fefe324b68d50dbf526969/output/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:24.2.1] /Users/sainishanthdilly/.android/build-cache/6d072d0d88ce98fc2c8f95bb1d94055c5c575f6f/output/AndroidManifest.xml:21:5-43
+MERGED from [com.android.support:support-compat:24.2.1] /Users/sainishanthdilly/.android/build-cache/d273b2878cbedc041a33b556c8ad292cc2d0f986/output/AndroidManifest.xml:21:5-23:58
+	tools:overrideLibrary
+		ADDED from [com.android.support:appcompat-v7:24.2.1] /Users/sainishanthdilly/.android/build-cache/0ecc7dc81eb291b1c47bc401eebaa741f361ac91/output/AndroidManifest.xml:23:9-75
+	android:targetSdkVersion
+		INJECTED from /Users/sainishanthdilly/AndroidStudioProjects/MyApplication2/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/sainishanthdilly/AndroidStudioProjects/MyApplication2/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/sainishanthdilly/AndroidStudioProjects/MyApplication2/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/sainishanthdilly/AndroidStudioProjects/MyApplication2/app/src/main/AndroidManifest.xml
